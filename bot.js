@@ -17,7 +17,7 @@ client.on('ready', function() {
 
 
 const developers = ["452379478618800129","",""]
-const adminprefix = "#";
+const adminprefix = "!";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
@@ -52,7 +52,7 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 });
 
 client.on("message", message => {
-    var prefix = "prefix"
+    var prefix = "!"
     if (!message.content.startsWith(prefix)) return;
       let command = message.content.split(" ")[0];
       command = command.slice(prefix.length);
